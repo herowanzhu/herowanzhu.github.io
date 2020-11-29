@@ -1,232 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
 
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
+<head>
 
-<title>He Zhu</title> 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-<script type="text/javascript">
+    <!-- Optional theme -->
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1997536-4']);
-  _gaq.push(['_trackPageview']);
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    <link href="starter-template.css" rel="stylesheet">
 
-</script></head><body> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
- 
-<hr> 
- 
-<h2>About He Zhu</h2> 
+    <title> He Zhu </title>
 
-<ul> 
-<font size="+1">
-I am an assistant professor at <a href="https://www.cs.rutgers.edu">the Department of Computer Science at Rutgers University-New Brunswick</a>.<br><br>
-My research focuses on improving software safety, correctness, and trustworthiness via program analysis, verification, synthesis, and machine learning.
-I am particularly interested in formal methods and automated reasoning.<br><br>
-	
-My current research interest lies at the intersection between deep learning and symbolic reasoning.
-On the one hand, I am working on how to apply deep learning to improve software system safety and correctness.
-On the other hand, I am investigating how symbolic reasoning can make deep learning more efficient, reliable, and trustworthy.
-Besides deep learning systems, I also enjoy applying formal verification to real-world distributed systems.<br><br>
-I obtained my PhD in <a href ="https://www.cs.purdue.edu/">Computer Science</a> at Purdue University,
-advised by Prof. <a href="https://www.cs.purdue.edu/homes/suresh/">Suresh Jagannathan</a>.
-</font>
-	
-<br>
-<br>
-<font color="red" size="+1">
-I am looking for Ph.D. students and undergraduate researchers with backgournd and interests in formal verification, symbolic reasoning, deep learning,	
-program analysis, verification and synthesis. If you are interested in working with me, please send me an email with your CV.
-</font>
-<br>
-<br>
-	
-</ul>
+    <!-- ?Cause all links to open in the parent frame? -->
+    <base target=_parent>
+</head>
 
-<h2>Contact</h2>
+<style>
+    a {
+        text-decoration: none;
+    }
 
-<ul>
-myfirstname dot mylastname dot cs AT myemployer dot edu
-<br>
-<br>
-</ul>
+    .col-md-4 {
+        width: 27%;
+    }
 
-<h2>Awards</h2>
-	
-<ul>
-<font color="blue" size="+1">ACM SIGPLAN PLDI 2019 Distinguished Paper Award.
-</font>
-</ul>
-	
-<ul>
-<font color="blue" size="+1">ACM SIGPLAN PLDI 2018 Distinguished Paper Award.
-</font>
-</ul>
+    .col-md-8 {
+        width: 73%;
+    }
 
-<ul>
-<font color="blue" size="+1">Maurice H. Halstead Memorial Award for outstanding research in Software Engineering (Purdue University).
-</font>
-</ul>
+    .col-md-9 {
+        width: 100%;
+        margin-left: 0px;
+    }
 
-<ul>
-<font color="blue" size="+1">Ross Fellowship for outstanding research in Programming Languages (Purdue University).
-</font>
-</ul>
+    body {
+        font-family: Palatino;
+        font-size: 17px;
+        line-height: 1.45;
+        color: black;
+        text-rendering: optimizeLegibility;
+    }
 
-<h2>Research Interests</h2>
+    .col-md-9 a {
+        color: #3232FF;
+        text-decoration: none;
+    }
 
-<ul>
-<font size="+1">
-I am interested in applying formal methods (formal verification) to build large-scale trustworthy software systems.
-	My current research focues on leveraging symbolic reasoning to construct trustworthy deep learning systems 
-	and formally reasoning about real-world distributed systems.</font>
-<br>	
-<font size="+1">
-I contributed to
-	the areas of Formal Methods, Programming Languages and Machine Learning. </font>	
-<br>
-<font size="+1">
-	Current projects include:</font>
-</ul>
-<ul>
-  <ul>
-    <li style="font-style: italic;">
-	    <font size="+1"> Program analysis, synthesis and verification applied to deep learning.</font>
-    </li>
-    <li style="font-style: italic;">
-	    <font size="+1"> Deep learning applied to program analysis, synthesis, and verification.</font>
-    </li>
-    <li style="font-style: italic;">
-	    <font size="+1"> Formal verification meets reinforcement learning.</font>
-    </li>
-    <li style="font-style: italic;">
-	    <font size="+1"> Formal verification meets distributed systems.</font>
-    </li>
-</ul>
-</ul>
+    .callout {
+        border: 1px solid #B2E6FF;
+        margin: 0.8em 0;
+        padding: 0.8em;
+        padding-bottom: 0.6em;
+        background-color: rgba(25, 240, 255, 0.514);
+        color: #333;
+    }
 
-<h2>Papers</h2> 
-	
-<ul>	
-Xuankang Lin, He Zhu, Roopsha Samanta and Suresh Jagannathan. "ART: Abstraction Refinement-Guided Training for Provably Correct Neural Networks".
-<br>
-<i>Manuscript</i>. 
-<a href ="https://arxiv.org/pdf/1907.10662.pdf">[pdf]</a>
-<br>
-<i>Evaluation Report (including CPS benchmarks)</i>. 
-<a href ="herowanzhu.github.io/art_draft.pdf">[pdf]</a>
+    .table-striped p {
+        font-size: 16px;
+        margin-top: 2px;
+        margin-bottom: -1px;
+        margin-left: 0px;
+    }
 
-<br>
-<br>
-	
-He Zhu, Zikang Xiong, Stephen Magill and Suresh Jagannathan. "An Inductive Synthesis Framework for Verifiable Reinforcement Learning".
-<br>
-<i>In 40th ACM SIGPLAN conference on Programming Language Design and Implementation
-(<a href="http://conf.researchr.org/home/pldi-2019">PLDI 2019</a>)</i>. 
-<a href ="herowanzhu.github.io/pldi2019.pdf">[pdf]</a><br>
-<font color="red">PLDI 2019 Distinguished Paper Award</font>
-
-<br>
-<br>
-	
-He Zhu, Stephen Magill and Suresh Jagannathan. "A Data-Driven CHC Solver".<br>
-<i>In 39th ACM SIGPLAN conference on Programming Language Design and Implementation
-(<a href="http://conf.researchr.org/home/pldi-2018">PLDI 2018</a>)</i>. 
-<a href ="herowanzhu.github.io/pldi2018.pdf">[pdf]</a>
-<a href="https://github.com/GaloisInc/LinearArbitrary-SeaHorn">[Tool]</a><br>
-<font color="red">PLDI 2018 Distinguished Paper Award</font>
-
-<br>
-<br>
-
-He Zhu, Gustavo Petri and Suresh Jagannathan. "Automatically Learning Shape Specifications".<br>
-<i>In 37th ACM SIGPLAN conference on Programming Language Design and Implementation
-(<a href="http://conf.researchr.org/home/pldi-2016">PLDI 2016</a>)</i>. 
-<a href ="herowanzhu.github.io/pldi2016.pdf">[pdf]</a>
-<a href="https://github.com/rowangithub/DOrder">[Tool]</a>
-
-<br>
-<br>
-
-He Zhu, Aditya V. Nori and Suresh Jagannathan. "Learning Refinement Types".<br>
-<i>In 20th ACM SIGPLAN International Conference on Functional Programming
-(<a href="http://icfpconference.org/icfp2015/">ICFP 2015</a>)</i>. 
-<a href="herowanzhu.github.io/icfp2015.pdf">[pdf]</a>
-<a href="https://github.com/rowangithub/DOrder">[Tool]</a>
-
-<br>
-<br>
-
-He Zhu, Gustavo Petri and Suresh Jagannathan. "Poling: SMT Aided Linearizability Proofs".<br>
-<i>In 27th International Conference on Computer Aided Verification
-(<a href="http://i-cav.org/2015/">CAV 2015</a>)</i>. 
-<a href="herowanzhu.github.io/cav2015.pdf">[pdf]</a>
-
-<br>
-<br>
-
-He Zhu, Aditya V. Nori and Suresh Jagannathan. "Dependent Array Type Inference from Tests".<br>
-<i>In 16th International Conference on Verification, Model Checking, and Abstract 
-Interpretation (<a href="http://research.microsoft.com/en-us/events/vmcai2015/">VMCAI 2015</a>)</i>. 
-<a href="herowanzhu.github.io/vmcai2015.pdf">[pdf]</a>
-
-<br>
-<br>
-
-He Zhu and Suresh Jagannathan. "Compositional and Lightweight Dependent Type Inference for ML".<br>
-<i>In 14th International Conference on Verification, Model Checking, and Abstract 
-Interpretation (<a href="http://vmcai13.di.univr.it/Home.html">VMCAI 2013</a>)</i>. 
-<a href="herowanzhu.github.io/vmcai2013.pdf">[pdf]</a>
-
-<br>
-<br>
-
-Fei He, He Zhu, W.N.N. Hung, Xiaoyu Song and Ming Gu. "Compositional Abstraction Refinement for Timed Systems".<br>
-<i>In 4th IEEE International Symposium on Theoretical Aspects of Software Engineering
-(<a href="http://www.iis.sinica.edu.tw/tase2010/">TASE 2010</a>)</i>.
-
-<br>
-<br>
-
-He Zhu, Fei He, W.N.N. Hung, Xiaoyu Song and Ming Gu. "Data Mining Based Decomposition for Assume-guarantee Reasoning".<br>
-<i>In 9th International Conference on Formal Methods in Computer-Aided Design 
-(<a href="http://fmv.jku.at/fmcad09/">FMCAD 2009</a>)</i>.
-</ul>
-
-<h2>Tech Reports</h2> 
-	
-<ul>
-He Zhu and Stephen Magill. "Applying Formal Methods to Reinforcement Learning".
-<a href ="https://galois.com/wp-content/uploads/2017/10/galois-formal-methods-reinforcement-learning.pdf">[Tech Report]</a>
+    .post li {
+        margin-left: 10px;
+    }
+</style>
 	
 <br>
-<br>
-	
-He Zhu. "State Repair From Cyber Attacks".
-<a href ="herowanzhu.github.io/state-repair.pdf">[Tech Report]</a>
-</ul>
-	
-<h2>Services</h2> 
 
-<ul>
-	<font size="+1">
-	Committee member in <a href="http://i-cav.org/2020/">CAV 2020</a>,
-	<a href="https://conf.researchr.org/track/etaps-2019/hcvs-2019-papers">HCVS 2019</a> and <a href="https://popl19.sigplan.org/track/POPL-2019-Artifact-Evaluation">POPL Artifact Evaluation 2019</a>.<br>
-	Co-chair of CAV 2020 Artifact Evaluation Committee. 
-	</font>
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <section id="content" class="body">
+
+                <div class="entry-content">
+                    <div class="row">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <br>
+                        <img src="images/photo.jpg" alt="My picture" style="width: 260px">
+                        <br>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <br>
+
+                        <b>
+                            <font size="+4">He Zhu</font>
+                        </b>
+
+                        <br>
+                        <br>
+
+                        <font size="+1">Assistant Professor</font>
+                        <br>
+
+
+                        <font size="+1">Computer Science Department</font>
+                        <br>
+
+                        <font size="+1">Rutgers University, New Brunswick</font>
+                        <br>
+
+                        <font size="+1">Email: <a
+                                href="mailto:hz375@cs.rutgers.edu">hz375@cs.rutgers.edu</a>
+                        </font>
+                        <br> <br><br>
+			<font size="+1"> [<a href="#award"><b>Awards</b></a>]
+                        </font>
+                        <font size="+1"> [<a href="#research"><b>Research</b></a>]
+                        </font>
+                        <!-- <font size="+1"> [<a href="#students"><b>Students</b></a>] -->
+                        </font>
+                        <font size="+1"> [<a href="#teaching"><b>Teaching</b></a>]
+                        </font>
+                        <font size="+1">[<a href="#publication"><b>Publications</b></a>]
+                        </font>
+                        <font size="+1"> [<a href="#service"><b>Service</b></a>]
+                        </font>
+
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+    <div class="col-md-9" style="margin-bottom: 15px;">
+        <div class="callout">
+            I am looking for motivated PhD and undergraduate students to join the RU Auotmated Reasoning group!
+            <br>
+            Please drop me an email with your CV if you are interested. Application deadline is
+            <span style="color:red;"><b> Dec. 31. 2020 </b></span> for PhD students.
+        </div>
+    </div>
 	
-<hr> 
- 
-<p> 
-Last modified: Sep 2019
- 
-</p>
-</body></html>
+    <hr style="border:1px solid gray;">
+
+    <div class="col-md-9" style="margin-bottom: 15px;">
+	    
+	I am an assistant professor in the <a href="https://www.cs.rutgers.edu">Department of Computer Science at Rutgers University-New Brunswick</a>.<br>
+	My research focuses on improving the safety and provable correctness of programming systems via program analysis, program verification, program synthesis, 
+	and machine learning, under the broad umbrella of automated reasoning and formal methods.<br>
+	
+        My current research interest lies at the intersection between deep learning and symbolic reasoning. I am investigating how to make deep learning systems 
+	and reinforcement learning systems more data-efficient, reliable, and trustworthy. In particular, I am interested in developing neural-symbolic systems 
+	that allow the tight integration of matchine programming and symbolic reasoning.
+	<br>
+        I obtained my Ph.D. from <a href="https://www.cs.purdue.edu/">Purdue CS</a>, advised by <a
+            href="https://www.cs.purdue.edu/homes/suresh/">Suresh Jagannathan</a>.
+        <br>
+    </div>
+	
+    <hr style="border:1px solid gray; margin-bottom: 0px;">
+
+    <div class="col-md-9" style="margin-bottom: 15px;">
+
+        <a name="news"></a>
+        <h2>News</h2>
+
+        <div class="post">
+            <li><span style="color:red;"><b> NSF Grant: </b></span>  
+		<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2007799">
+		Formal Symbolic Reasoning of Deep Reinforcement Learning Systems</a>!
+	    </li>
+            <li><span style="color:red;"><b> DARPA Grant: </b></span>  
+		<a href="https://www.darpa.mil/news-events/symbiotic-design-for-cyber-physical-systems-proposers-day">
+		Symbiotic Design for Cyber Physical Systems </a>!
+	    </li>
+            <!-- <li>I will be teaching <a href="">CS 314</a> in the Spring
+                semester.</li> -->
+        </div>
+
+    </div>
+	
+    <hr style="border:1px solid gray; margin-bottom: 0px;">
+
+    <div class="col-md-9" style="margin-bottom: 15px;">
+        <a name="award"></a>
+        <h2>Awards</h2>
+
+        <li> ACM SIGPLAN PLDI 2019 Distinguished Paper Award.
+        </li>
+
+        <li> ACM SIGPLAN PLDI 2018 Distinguished Paper Award.
+        </li>
+	    
+	<li> Maurice H. Halstead Memorial Award for outstanding research in Software Engineering (Purdue University).
+	</li>
+
+    </div>
+	
+    <hr style="border:1px solid gray; margin-bottom: 0px;">
+
+    <div class="col-md-9" style="margin-bottom: 15px;">
+
+        <a name="research"></a>
+        <h2>Research</h2>
+	    
+        My research generally falls into the areas of programming languages, formal methods, and
+        machine learning.
+        My current research is primarily centered around how to integrate formal program reasoning
+	techniques such as program synthesis and program verification into reinforcement learning
+	training loops. My long-term research goal is to build intelligent and explainable neural-symbolic 
+	systems that can be formally certified correct and reliable.
+        <!-- Towards this goal, I am interested in exploring the following directions.
+        <li>
+            Program Synthesis for Reinforcement Learning.
+        </li> -->
+    </div>
+	
+    <hr style="border:1px solid gray; margin-bottom: 0px;">
+
+    <div class="col-md-9" style="margin-bottom: 15px;">
+        <a name="teaching"></a>
+        <h2>Teaching</h2>
+	    
+        <li>CS 515. Programming Languages and Compilers [<a
+                href="">F20</a>]
+        </li>
+        <li>CS 314. Principles of Programming Languages [<a
+                href="https://rowangithub.github.io/cs314_s20/">S20</a>]
+        </li>
+	<li>CS 515. Programming Languages and Compilers [<a
+                href="">F19</a>]
+        </li>
+
+    </div>
+	
+    <hr style="border:1px solid gray; margin-bottom: 0px;">
+
+    <div class="col-md-9" style="margin-bottom: 15px;">
+
+        <a name="publication"></a>
+        <h2>Publications</h2>
+
+        <table class="table table-striped">
+
+            <td>
+                <p>
+                <strong>ART: Abstraction Refinement-Guided Training for Provably Correct Neural Networks</strong> [<a href="https://arxiv.org/pdf/1907.10662.pdf">pdf</a>]
+                    <br>
+                    Xuankang Lin, He Zhu, Roopsha Samanta and Suresh Jagannathan.
+                    <br>
+                    Formal Methods in Computer-Aided Design (FMCAD), 2020
+                </p>
+            </td>
+            <tr />
+
+            <td>
+                <p>
+                    <strong> An Inductive Synthesis Framework for Verifiable Reinforcement Learning </strong> [<a
+                        href="herowanzhu.github.io/pldi2019.pdf">pdf</a>][<a href="https://github.com/caffett/VRL_CodeReview">code</a>] 
+		    <br><strong><font color="red">ACM SIGPLAN distinguished paper award</font></strong>
+                    <br>
+                    He Zhu, Zikang Xiong, Stephen Magill and Suresh Jagannathan 
+		    <br>
+                Proceedings of the 40th ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI), 2019
+	        </p>
+            </td>
+            <tr />
+
+            <td>
+                <p>
+                    <strong> A Data-Driven CHC Solver </strong> [<a
+                        href="herowanzhu.github.io/pldi2018.pdf">pdf</a>][<a href="https://github.com/GaloisInc/LinearArbitrary-SeaHorn">code</a>] 
+		    <br><strong><font color="red">ACM SIGPLAN distinguished paper award</font></strong>
+                    <br>
+                    He Zhu, Stephen Magill and Suresh Jagannathan
+		    <br>
+                Proceedings of the 39th ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI), 2018
+	        </p>
+            </td>
+            <tr />
+		
+	    <td>
+                <p>
+                    <strong> Automatically Learning Shape Specifications </strong> [<a
+                        href="herowanzhu.github.io/pldi2016.pdf">pdf</a>][<a href="https://github.com/rowangithub/DOrder">code</a>] 
+                    <br>
+                    He Zhu, Gustavo Petri and Suresh Jagannathan
+		    <br>
+                Proceedings of the 37th ACM SIGPLAN conference on Programming Language Design and Implementation (PLDI), 2016
+	        </p>
+            </td>
+            <tr />
+		
+	    <td>
+                <p>
+                    <strong> Learning Refinement Types </strong> [<a
+                        href="herowanzhu.github.io/icfp15.pdf">pdf</a>][<a href="https://github.com/rowangithub/DOrder">code</a>] 
+                    <br>
+                    He Zhu, Aditya V. Nori and Suresh Jagannathan
+		    <br>
+                Proceedings of the 20th ACM SIGPLAN International Conference on Functional Programming (ICFP), 2015
+	        </p>
+            </td>
+            <tr />
+		
+	    <td>
+                <p>
+                    <strong> Poling: SMT Aided Linearizability Proofs </strong> [<a
+                        href="herowanzhu.github.io/cav15.pdf">pdf</a>]
+                    <br>
+                    He Zhu, Gustavo Petri and Suresh Jagannathan
+		    <br>
+                Proceedings of the 27th International Conference on Computer Aided Verification (CAV), 2015
+	        </p>
+            </td>
+            <tr />
+		
+	    <td>
+                <p>
+                    <strong> Dependent Array Type Inference from Tests </strong> [<a
+                        href="herowanzhu.github.io/vmcai15.pdf">pdf</a>]
+                    <br>
+                    He Zhu, Aditya V. Nori and Suresh Jagannathan
+		    <br>
+                Proceedings of the 16th International Conference on Verification, Model Checking, and Abstract Interpretation (VMCAI), 2015
+	        </p>
+            </td>
+            <tr />
+		
+	    <td>
+                <p>
+                    <strong> Compositional and Lightweight Dependent Type Inference for ML </strong> [<a
+                        href="herowanzhu.github.io/vmcai13.pdf">pdf</a>]
+                    <br>
+                    He Zhu and Suresh Jagannathan
+		    <br>
+                Proceedings of the 14th International Conference on Verification, Model Checking, and Abstract Interpretation (VMCAI), 2013
+	        </p>
+            </td>            
+        </table>
+    </div>
+	
+    <hr style="border:1px solid gray; margin-bottom: 0px;">
+
+    <div class="col-md-9" style="margin-bottom: 15px;">
+        <a name="service"></a>
+        <h2>Service</h2>
+
+        <li> 2021: PLDI PC
+        </li>
+
+        <li> 2020: CAV AEC co-chair, CAV PC, NSF Panelist, TSE Reviewer
+        </li>
+	    
+	<li> 2019: HCVS PC
+	</li>
+
+    </div>
+    
+</div>
+	
+</html>
