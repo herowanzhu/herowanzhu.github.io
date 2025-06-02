@@ -190,8 +190,8 @@
 
     <br>
     <li>
-	  <b>Neurosymbolic Robot-control Program Synthesis</b> — Our work on program synthesis for robot learning focuses on efficient algorithms given a well-designed neuro-symbolic
-	  DSL (domain-specific language). This DSL combines standard language constructs with a library of neural components, each representing a task-agnostic skill that can be executed by a robot.
+	  <b>Neurosymbolic Program Synthesis</b> — Our work in neurosymbolic program synthesis for robot learning develops efficient algorithms grounded in a carefully designed neurosymbolic domain-specific language (DSL).
+	    This DSL combines standard language constructs with a library of neural components, each representing a task-agnostic skill that can be executed by a robot.
 	  
 	  <ul style="margin-top: 10px; margin-bottom: 10px;">
 	    <li style="margin-bottom: 20px;">
@@ -229,7 +229,7 @@
 	      <br>
 	      [<a href="https://herowanzhu.github.io/roboscribe.pdf">RoboScribe</a>] (2025) 
 	      <br><br>
-	      <img src='https://herowanzhu.github.io/roboscribe_framework.png' width=800 />
+	      <img src='https://herowanzhu.github.io/roboscribe_framework.png' width=600 />
 	    </li>
 	    <li>
 	      <div style="overflow: hidden;">
@@ -246,6 +246,18 @@
 	    </li>
 	  </ul>
     </li>
+    
+    <li> 
+	  <b>Neurosymbolic Program Verification</b> A central thrust of my research lies in integrating learning and verification to ensure that neurosymbolic programs satisfy
+          rigorous correctness specifications. My core algorithmic insight is to exploit the hierarchical structure of neurosymbolic programs to enable (i) deductive verification of high-level symbolic programs by abstracting neural components in abstract
+          state spaces, and (ii) modular verification of low-level neural components within the concrete state spaces. This separation
+          allows for efficient verification of the program’s logical structure without being hindered by the complexity of its neural
+          components. The neural components are then compositionally verified within their concrete domains.
+	  <br>
+	  [<a href="https://herowanzhu.github.io/vel_tacas.pdf">VEL</a>](TACAS'23), [<a href="https://herowanzhu.github.io/CAV_2024.pdf">VELM</a>](CAV'24), [<a href="https://herowanzhu.github.io/VEL-inf.pdf">VELM</a>](CAV'25)
+	  
+    </li>    
+	    
 	    
     </div>
 
@@ -261,7 +273,7 @@
 	    <td>
                 <p>
                     <strong> Deductive Synthesis of Reinforcement Learning Agents for Infinite-Horizon Tasks </strong> [<a
-                        href="">pdf</a>]
+                        href="https://herowanzhu.github.io/VEL-inf.pdf">pdf</a>]
 		    <br>
                     Yuning Wang and He Zhu. 
 		    <br>
