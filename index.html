@@ -37,56 +37,98 @@
 </head>
 
 <style>
-    a {
-        text-decoration: none;
-    }
+  /* Existing styles preserved */
+  a {
+      text-decoration: none;
+  }
 
-    .col-md-4 {
-        width: 27%;
-    }
+  .col-md-4 {
+      width: 27%;
+  }
 
-    .col-md-8 {
-        width: 73%;
-    }
+  .col-md-8 {
+      width: 73%;
+  }
 
-    .col-md-9 {
-        width: 100%;
-        margin-left: 0px;
-    }
+  .col-md-9 {
+      width: 100%;
+      margin-left: 0px;
+  }
 
-    body {
-        font-family: Palatino;
-        font-size: 17px;
-        line-height: 1.45;
-        color: black;
-        text-rendering: optimizeLegibility;
-    }
+  body {
+      font-family: Palatino;
+      font-size: 17px;
+      line-height: 1.45;
+      color: black;
+      text-rendering: optimizeLegibility;
+  }
 
-    .col-md-9 a {
-        color: #3232FF;
-        text-decoration: none;
-    }
+  .col-md-9 a {
+      color: #3232FF;
+      text-decoration: none;
+  }
 
-    .callout {
-        border: 1px solid #B2E6FF;
-        margin: 0.8em 0;
-        padding: 0.8em;
-        padding-bottom: 0.6em;
-        background-color: rgba(25, 240, 255, 0.514);
-        color: #333;
-    }
+  .callout {
+      border: 1px solid #B2E6FF;
+      margin: 0.8em 0;
+      padding: 0.8em;
+      padding-bottom: 0.6em;
+      background-color: rgba(25, 240, 255, 0.514);
+      color: #333;
+  }
 
-    .table-striped p {
-        font-size: 16px;
-        margin-top: 2px;
-        margin-bottom: -1px;
-        margin-left: 0px;
-    }
+  .table-striped p {
+      font-size: 16px;
+      margin-top: 2px;
+      margin-bottom: -1px;
+      margin-left: 0px;
+  }
 
-    .post li {
-        margin-left: 10px;
-    }
+  .post li {
+      margin-left: 10px;
+  }
+
+  /* New layout styles for neurosymbolic content blocks */
+  .content-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      gap: 20px;
+  }
+
+  .text-block {
+      flex: 1 1 60%;
+  }
+
+  .image-block {
+      flex: 0 0 300px;
+      text-align: right;
+  }
+
+  .image-block img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 6px;
+  }
+
+  ul.inner-list {
+      padding-left: 0;
+      list-style-type: none;
+  }
+
+  li.inner-item {
+      margin-bottom: 40px;
+  }
+
+  .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 18px;
+  }
 </style>
+
 	
 <br>
 
@@ -190,62 +232,73 @@
 
     <br>
     <li>
-	  <b>Neurosymbolic Program Synthesis</b> — Our work in neurosymbolic program synthesis for robot learning develops efficient algorithms grounded in a carefully designed neurosymbolic domain-specific language (DSL).
-	    This DSL combines standard language constructs with a library of neural components, each representing a task-agnostic skill that can be executed by a robot.
-	  
-	  <ul style="margin-top: 10px; margin-bottom: 10px;">
-	    <li style="margin-bottom: 20px;">
-	      <b>(1) Differentiable Synthesis:</b> Unlike training deep neural nets, synthesizing programs requires optimizing over a combinatorial, non-differentiable, and rapidly exploded space of program structures. 
-	      My research asks: can we jointly search discrete program structures and program parameters using efficient optimization-based techniques?
-	      <br>
-	      [<a href="https://herowanzhu.github.io/NeurIPS_2021-3.pdf">dPads</a>] (NeurIPS'21), [<a href="https://openreview.net/pdf?id=6Tk2noBdvxt">pi-PRL</a>] (ICLR'22)
-	      <br><br>
-	      <img src='https://herowanzhu.github.io/antcrossmaze-prog.png' width=800 />
+	  <div class="section-title">Neurosymbolic Program Synthesis</div>
+	  Our work in neurosymbolic program synthesis for robot learning develops efficient algorithms grounded in a carefully designed neurosymbolic domain-specific language (DSL). This DSL combines standard language constructs with a library of neural components, each representing a task-agnostic skill that can be executed by a robot.
+	
+	  <ul class="inner-list">
+	    <li class="inner-item">
+	      <div class="content-block">
+	        <div class="text-block">
+	          <b>(1) Differentiable Synthesis:</b> Unlike training deep neural nets, synthesizing programs requires optimizing over a combinatorial, non-differentiable, and rapidly exploded space of program structures. My research asks: can we jointly search discrete program structures and program parameters using efficient optimization-based techniques?
+	          <br>
+	          [<a href="https://herowanzhu.github.io/NeurIPS_2021-3.pdf">dPads</a>] (NeurIPS'21), [<a href="https://openreview.net/pdf?id=6Tk2noBdvxt">pi-PRL</a>] (ICLR'22)
+	        </div>
+	        <div class="image-block">
+	          <img src="https://herowanzhu.github.io/antcrossmaze-prog.png" alt="dPads Image" />
+	        </div>
+	      </div>
 	    </li>
 	
-	    <li>
-	      <div style="overflow: hidden;">
-	        <div style="float: left; width: 60%;">
-	          <b>(2) Reward-guided Synthesis:</b> Robotic tasks typically involve a long horizon, extending over thousands of control steps and are characterized by sparse rewards, where reward signals are given only upon successful task completion or sporadically
-	          for critical steps. My research investigates: can we use the inductive biases in language constructs such as state-conditioned loops to effectively compress the exploration space for long-horizon, multi-stage, and procedural robot-control tasks?	    
+	    <li class="inner-item">
+	      <div class="content-block">
+	        <div class="text-block">
+	          <b>(2) Reward-guided Synthesis:</b> Robotic tasks typically involve a long horizon, extending over thousands of control steps and are characterized by sparse rewards. My research investigates: can we use inductive biases in language constructs such as state-conditioned loops to effectively compress the exploration space for long-horizon, multi-stage, and procedural robot-control tasks?
 	          <br>
 	          [<a href="https://herowanzhu.github.io/PLDI_2024.pdf">ReGuS</a>] (PLDI'24)
 	        </div>
-	        <div style="float: right; width: 38%;">
-	          <img src='https://herowanzhu.github.io/regusnav-prog.png' width="50%" />
+	        <div class="image-block">
+	          <img src="https://herowanzhu.github.io/regusnav-prog.png" alt="ReGuS Image" />
 	        </div>
 	      </div>
 	    </li>
 	  </ul>
-    </li>
-    <li> 
-	  <b>Symbol Discovery via Abstraction Refinement for Neurosymbolic Programs</b>  
-          
-	  <ul style="margin-top: 10px; margin-bottom: 10px;">
-	    <li style="margin-bottom: 20px;">
-	      <b>(1) Comparative Abstraction Refinement:</b> Automatically learning state and action abstractions has been a key area in RL and robotics. While prior work has explored learning relational abstractions from task demonstrations, existing approaches 
-		    either assume access to low-level controllers that are already available or predefined predicates—limiting their applicability. The simultaneous discovery of both remains an open challenge. My research asks: can we develop abstraction refinement
-		    techniques to automatically infer suitable state and action abstractions from task demonstrations?
-	      <br>
-	      [<a href="https://herowanzhu.github.io/roboscribe.pdf">RoboScribe</a>] (2025) 
-	      <br><br>
-	      <img src='https://herowanzhu.github.io/roboscribe_framework.png' width=600 />
-	    </li>
-	    <li>
-	      <div style="overflow: hidden;">
-	        <div style="float: left; width: 60%;">
-	          <b>(2) Learning from Exploration:</b> A major limitation in RoboScribe is the need for manual task demonstration provision for comparative abstraction refinement. 
-			My research explores: can environment abstraction be fully automated by allowing an agent to explore and collect successful trajectories?
+	</li>
+
+    <li>
+	  <div class="section-title">Symbol Discovery via Abstraction Refinement for Neurosymbolic Programs</div>
+	
+	  <ul class="inner-list">
+	    <li class="inner-item">
+	      <div class="content-block">
+	        <div class="text-block">
+	          <b>(1) Comparative Abstraction Refinement:</b> Automatically learning state and action abstractions has been a key area in RL and robotics. While prior work has explored learning relational abstractions from task demonstrations, existing approaches 
+	          either assume access to low-level controllers that are already available or predefined predicates—limiting their applicability. The simultaneous discovery of both remains an open challenge. My research asks: can we develop abstraction refinement
+	          techniques to automatically infer suitable state and action abstractions from task demonstrations?
 	          <br>
-	          [<a href="https://openreview.net/pdf?id=9hKN99RNdR">CE2</a>](NeurIPS'24), [<a href="https://openreview.net/pdf?id=aYqTwcDlCG">MUN</a>](NeurIPS'24), [<a href="https://herowanzhu.github.io/Cago.pdf">Cago</a>](2025)
+	          [<a href="https://herowanzhu.github.io/roboscribe.pdf">RoboScribe</a>] (2025)
 	        </div>
-	        <div style="float: right; width: 38%;">
-	          <img src='https://herowanzhu.github.io/Cluster-Visualization.png' width="100%" />
+	        <div class="image-block">
+	          <img src="https://herowanzhu.github.io/roboscribe_framework.png" alt="RoboScribe Framework" />
+	        </div>
+	      </div>
+	    </li>
+	
+	    <li class="inner-item">
+	      <div class="content-block">
+	        <div class="text-block">
+	          <b>(2) Learning from Exploration:</b> A major limitation in RoboScribe is the need for manual task demonstration provision for comparative abstraction refinement. 
+	          My research explores: can environment abstraction be fully automated by allowing an agent to explore and collect successful trajectories?
+	          <br>
+	          [<a href="https://openreview.net/pdf?id=9hKN99RNdR">CE2</a>] (NeurIPS'24), [<a href="https://openreview.net/pdf?id=aYqTwcDlCG">MUN</a>] (NeurIPS'24), [<a href="https://herowanzhu.github.io/Cago.pdf">Cago</a>] (2025)
+	        </div>
+	        <div class="image-block">
+	          <img src="https://herowanzhu.github.io/Cluster-Visualization.png" alt="Cluster Visualization" />
 	        </div>
 	      </div>
 	    </li>
 	  </ul>
-    </li>
+	</li>
+
     
     <li> 
 	  <b>Neurosymbolic Program Verification</b> A central thrust of my research lies in integrating learning and verification to ensure that neurosymbolic programs satisfy
