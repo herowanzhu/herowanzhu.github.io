@@ -187,6 +187,31 @@
     <div style="text-align: center;">
         <img src="https://herowanzhu.github.io/research_overview.png" width="900" />
     </div>
+
+
+    <li><b>Neurosymbolic Robot-control Program Synthesis</b> -- Our work on program synthesis for robot learning focuses on efficient algorithms given a well-designed neuro-symbolic
+    DSL (domain-specific languages). This DSL combines standard language constructs with a library of neural components, each representing a taskagnostic skill that can be executed by a robot.
+       <li>(1) Differentiable Synthesis: Unlike training deep neural nets, synthesizing programs requires optimizing over a combinatorial, non-differentiable, and rapidly exploded space of program structures. 
+	       My research asks: can we jointly search discrete program structures and program parameters using efficient optimization-based techniques?
+	       <br>
+	       [<a href="https://herowanzhu.github.io/NeurIPS_2021-3.pdf">dPads</a>](NeurIPS'21) [<a href="https://openreview.net/pdf?id=6Tk2noBdvxt">pi-PRL</a>](ICLR'22)
+       	       <br>
+    	       <img src='https://herowanzhu.github.io/antcrossmaze-prog.png' width=700 />
+       </li>	
+       <li>
+	  <div style="overflow: hidden;">
+	    <div style="float: left; width: 60%;">
+	      (2) Reward-guided Synthesis. Robotic tasks typically involve a long horizon, extending over thousands of control steps and are characterized by sparse rewards, where reward signals are given only upon successful task completion or sporadically
+	      for critical steps. My research investigates: can we use the inductive biases in language constructs such as state-conditioned loops to effectively compress the exploration space for long-horizon, multi-stage, and procedural robot-control tasks?	    
+	      [<a href="https://herowanzhu.github.io/PLDI_2024.pdf">ReGuS (PLDI'24)</a>]
+	    </div>
+	    <div style="float: right; width: 38%;">
+	      <img src='https://herowanzhu.github.io/regusnav-prog.png' width="100%" />
+	    </div>
+	  </div>
+	</li>
+    </li>
+	    
     </div>
 
     <hr style="border:1px solid gray; margin-bottom: 0px;">	
