@@ -233,8 +233,6 @@
     <br>
     <li>
 	  <b style="font-weight: bold;">Neurosymbolic Program Synthesis</b>  
-	  Our work in neurosymbolic program synthesis for robot learning develops efficient algorithms grounded in a carefully designed neurosymbolic domain-specific language (DSL). This DSL combines standard language constructs with a library of neural components, each representing a task-agnostic skill that can be executed by a robot.
-	  <br>
 	  <ul class="inner-list">
 	    <li class="inner-item">
 	      <div class="content-block">
@@ -266,14 +264,13 @@
     
     <li>
 	  <b style="font-weight: bold;">Symbol Discovery via Abstraction Refinement for Neurosymbolic Programs</b>  
-	  A crucial bottleneck in existing synthesis techniques for reinforcement learning and robotics systems is the reliance on manually designed symbolic definitions of state abstraction predicates and abstract actions in a DSL to bootstrap synthesis. High-quality abstractions ensure that programs synthesized from them can be executed successfully in the real environment but often require significant human effort and domain knowledge to customize effectively. My work explores ways to automatically generate such abstraction as part of the synthesis process.
 	  <br>
 	  <ul class="inner-list">
 	    <li class="inner-item">
 	      <div class="content-block">
 	        <div class="text-block">
 	          <b>(1) Comparative Abstraction Refinement:</b> Automatically learning state and action abstractions has been a key area in RL and robotics. While prior work has explored learning relational abstractions from task demonstrations, existing approaches 
-	          either assume access to low-level controllers that are already available or predefined predicates—limiting their applicability. The simultaneous discovery of both remains an open challenge. My research asks: can we develop comparative abstraction refinement techniques 
+	          either assume access to low-level controllers that are already available or predefined predicates—limiting their applicability. The simultaneous discovery of both (as the symbolic definitions for neurosymbolic programming) remains an open challenge. My research asks: can we develop comparative abstraction refinement techniques 
 		  that automatically infer state and action abstractions by contrasting expert demonstrations with learned policy behavior to reveal key subgoals and the underlying subtask structure?
 	          <br>
 	          [<a href="https://herowanzhu.github.io/roboscribe.pdf">RoboScribe</a>] (2025)
