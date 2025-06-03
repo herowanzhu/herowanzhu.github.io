@@ -232,14 +232,14 @@
 
     <br>
     <li>
-	  <b style="font-weight: bold;">Neurosymbolic Program Synthesis</b>  
+	  <b style="font-weight: bold;">1. Neurosymbolic Program Synthesis</b>  
 	  Our work in neurosymbolic program synthesis for robot learning develops efficient algorithms grounded in a carefully designed neurosymbolic domain-specific language (DSL). This DSL combines standard language constructs with a library of neural components, each representing a task-agnostic skill that can be executed by a robot.
 	  <br>
 	  <ul class="inner-list">
 	    <li class="inner-item">
 	      <div class="content-block">
 	        <div class="text-block">
-	          <b>(1) Differentiable Synthesis:</b> Unlike training deep neural nets, synthesizing programs requires optimizing over a combinatorial, non-differentiable, and rapidly exploded space of program structures. My research asks: can we jointly search discrete program structures and program parameters using efficient optimization-based techniques?
+	          <b>(1.1) Differentiable Synthesis:</b> Unlike training deep neural nets, synthesizing programs requires optimizing over a combinatorial, non-differentiable, and rapidly exploded space of program structures. My research asks: can we jointly search discrete program structures and program parameters using efficient optimization-based techniques?
 	          <br>
 	          [<a href="https://herowanzhu.github.io/NeurIPS_2021-3.pdf">dPads</a>] (NeurIPS'21), [<a href="https://openreview.net/pdf?id=6Tk2noBdvxt">pi-PRL</a>] (ICLR'22)
 	        </div>
@@ -251,7 +251,7 @@
 	    <li class="inner-item">
 	      <div class="content-block">
 	        <div class="text-block">
-	          <b>(2) Reward-guided Synthesis:</b> Robotic tasks typically involve a long horizon, extending over thousands of control steps and are characterized by sparse rewards. My research investigates: can we use inductive biases in language constructs such as state-conditioned loops to effectively compress the exploration space for long-horizon, multi-stage, and procedural robot-control tasks?
+	          <b>(1.2) Reward-guided Synthesis:</b> Robotic tasks typically involve a long horizon, extending over thousands of control steps and are characterized by sparse rewards. My research investigates: can we use inductive biases in language constructs such as state-conditioned loops to effectively compress the exploration space for long-horizon, multi-stage, and procedural robot-control tasks?
 	          <br>
 	          [<a href="https://herowanzhu.github.io/PLDI_2024.pdf">ReGuS</a>] (PLDI'24)
 	        </div>
@@ -265,14 +265,14 @@
 
     
     <li>
-	  <b style="font-weight: bold;">Symbol Discovery via Abstraction Refinement for Neurosymbolic Programs</b>  
+	  <b style="font-weight: bold;">2. Symbol Discovery via Abstraction Refinement for Neurosymbolic Programs</b>  
 	  A crucial bottleneck in existing synthesis techniques for reinforcement learning and robotics systems is the reliance on manually designed symbolic definitions of state abstraction predicates and abstract actions in a DSL to bootstrap synthesis. High-quality abstractions ensure that programs synthesized from them can be executed successfully in the real environment but often require significant human effort and domain knowledge to customize effectively. My work explores ways to automatically generate such abstraction as part of the synthesis process.
 	  <br>
 	  <ul class="inner-list">
 	    <li class="inner-item">
 	      <div class="content-block">
 	        <div class="text-block">
-	          <b>(1) Comparative Abstraction Refinement:</b> Automatically learning state and action abstractions has been a key area in RL and robotics. While prior work has explored learning relational abstractions from task demonstrations, existing approaches 
+	          <b>(2.1) Comparative Abstraction Refinement:</b> Automatically learning state and action abstractions has been a key area in RL and robotics. While prior work has explored learning relational abstractions from task demonstrations, existing approaches 
 	          either assume access to low-level controllers that are already available or predefined predicates—limiting their applicability. The simultaneous discovery of both remains an open challenge. My research asks: can we develop comparative abstraction refinement techniques 
 		  that automatically infer state and action abstractions by contrasting expert demonstrations with learned policy behavior to reveal key subgoals and the underlying subtask structure?
 	          <br>
@@ -286,7 +286,7 @@
 	    <li class="inner-item">
 	      <div class="content-block">
 	        <div class="text-block">
-	          <b>(2) Learning from Exploration:</b> A major limitation in comparative abstraction refinement is the need for manual task demonstration provision for comparative abstraction refinement. 
+	          <b>(2.2) Learning from Exploration:</b> A major limitation in comparative abstraction refinement is the need for manual task demonstration provision for comparative abstraction refinement. 
 	          My research explores: can environment abstraction be fully automated by allowing an agent to explore and collect successful trajectories?
 	          <br>
 	          [<a href="https://openreview.net/pdf?id=9hKN99RNdR">CE2</a>] (NeurIPS'24), [<a href="https://openreview.net/pdf?id=aYqTwcDlCG">MUN</a>] (NeurIPS'24), [<a href="https://herowanzhu.github.io/Cago.pdf">Cago</a>] (2025)
@@ -300,7 +300,7 @@
 	</li>
 
     <li> 
-	<b style="font-weight: bold;">Neurosymbolic Program Verification</b> 
+	<b style="font-weight: bold;">3. Neurosymbolic Program Verification</b> 
 	A central thrust of my research lies in integrating learning and verification to ensure that neurosymbolic programs satisfy rigorous correctness specifications. My core algorithmic insight is to exploit the hierarchical structure  of neurosymbolic programs to enable (i) deductive verification of high-level symbolic programs by abstracting neural components in abstract state spaces, and (ii) modular verification of low-level neural components within the concrete state spaces.  This separation allows for efficient verification of the program’s logical structure without being hindered by the complexity of its neural components. The neural components are then compositionally verified within their concrete domains.
         <br>
     [<a href="https://herowanzhu.github.io/vel_tacas.pdf">VEL</a>] (TACAS'23), [<a href="https://herowanzhu.github.io/CAV_2024.pdf">VELM</a>] (CAV'24), [<a href="https://herowanzhu.github.io/VEL-inf.pdf">VEL-∞</a>] (CAV'25)
